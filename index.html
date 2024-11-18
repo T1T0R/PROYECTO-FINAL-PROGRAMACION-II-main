@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/ESTILOS/estilo.css">
+</head>
+<body>
+    <!-- Contenedor de video de fondo -->
+    <div class="video-contenedor">
+        <video autoplay muted loop>
+            <source src="/RECURSOS/acuario.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <!-- Contenedor de formulario de login -->
+    <div class="login-contenedor">
+        <form class="login-formulario">
+            <h2>Iniciar Sesión</h2>
+            <input type="email" id="username" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="button" onclick="Usuario.InicioSesion()">Entrar</button>
+            <p id="Registro-Link"><a href="/PAGINAS/registro.html">¿No tienes cuenta? Regístrate aquí.</a></p>
+        </form>
+    </div>
+
+    <script src="/SCRIPTS/login.js"></script>
+</body>
+<footer>
+   <p>thiagoroblesss</p>
+   <img src="/RECURSOS/logoig.jpg" alt="Logo Instagram" class="instagram-logo">
+</footer>
+</html>
+

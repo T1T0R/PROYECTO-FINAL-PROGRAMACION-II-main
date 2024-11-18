@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body,html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed;
+}
+
+#RegistroBody {
+  background-image: url(/RECURSOS/noche-en-el-bosque-montanas-pinos-luna_3840x2160_xtrafondos.com.jpg);
+}
+
+.video-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-contenedor video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-formulario {
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo más transparente */
+  backdrop-filter: blur(15px); /* Efecto de desenfoque más fuerte */
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra más suave y difusa */
+  color: #fff;
+  border: 3px solid #00bcd4; /* Borde color aqua */
+}
+
+#Registro-Link{
+    margin-top: 25px;
+    font-weight: bold;
+}
+.login-formulario button {
+  margin-top: 20px;
+}
+
+.login-formulario h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #00bcd4; /* Color aqua */
+}
+
+.login-formulario input[type="email"],
+.login-formulario input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.836); /* Fondo de input más transparente */
+  color: #111414;
+}
+
+.login-formulario button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4; /* Color aqua */
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-formulario button:hover {
+  background-color: #0097a7; /* Color más oscuro al pasar el mouse */
+}
+
+.login-formulario p {
+  margin-top: 10px;
+}
+
+.login-formulario a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.login-formulario a:hover {
+  text-decoration: underline;
+}
+
+footer{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y el logo */
+    transition: color 0.3s ease;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00bcd4; /* Cambia el color del texto al pasar el mouse */
+}
+
+.instagram-logo {
+    width: 24px; /* Tamaño del logo */
+    height: 24px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+
+.instagram-logo:hover {
+    transform: scale(1.2); /* Efecto de aumentar el tamaño al pasar el mouse */
+}
+
+
+
+/* Registro */
+.formulario-contenedor {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo más transparente */
+  backdrop-filter: blur(15px); /* Efecto de desenfoque */
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra difusa */
+  color: #fff;
+  border: 3px solid #00bcd4; /* Borde color aqua */
+  animation: animacion1 1s ease-out forwards; /* Animación al cargar */
+}
+@keyframes animacion1{
+    0% {
+        top: -150%; /* Empieza fuera de la pantalla */
+    }
+    100% {
+        top: 50%; /* Se mueve al centro de la pantalla */
+        transform: translate(-50%, -50%); /* Ajusta el centro */
+
+    }
+}
+
+/* Título del formulario */
+.formulario-contenedor h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #00bcd4; /* Color aqua */
+  text-align: center;
+}
+
+/* Estilos para los campos del formulario */
+.formulario-contenedor label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.formulario-contenedor input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo más suave */
+  color: #fff;
+  border: 1px solid #00bcd4; /* Borde azul */
+}
+
+/* Estilos para el botón */
+.formulario-contenedor button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4; /* Color aqua */
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón */
+.formulario-contenedor button:hover {
+  background-color: #0097a7; /* Color más oscuro al pasar el mouse */
+}
+
+.formulario-contenedor button {
+  margin-top: 20px;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.video-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-menu video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Barra de navegación transparente */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparente */
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Menú de navegación */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu li {
+  position: relative; /* Necesario para el menú desplegable */
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente al pasar el mouse */
+  color: #00bcd4;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo del menú desplegable */
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.dropdown li {
+  padding: 5px 20px;
+}
+
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: #00bcd4; /* Color más claro al pasar el mouse */
+  border-radius: 5px;
+}
+
+/* Mostrar dropdown al pasar el mouse */
+.navbar-menu li:hover .dropdown {
+  display: block;
+}
+
+/* Contenedor del sprite */
+.sprite-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centra verticalmente */
+  position: relative;
+  z-index: 1;
+}
+
+/* Contenedor del sprite */
+.sprite-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura de la pantalla */
+  position: relative;
+  z-index: 1;
+}
+
+/* Sprite de Among Us */
+.among-sprite {
+  width:300px; /* Ancho de un cuadro individual */
+  height: 350px; /* Alto de un cuadro individual */
+  background-image: url('/RECURSOS/Amongus.png'); /* Ruta del sprite */
+  background-size: 400%; /* 4 cuadros en fila (cada uno 25% del ancho) */
+  animation: among-run 500ms steps(4) infinite; /* 4 pasos para la animación */
+}
+
+/* Animación del sprite */
+@keyframes among-run {
+  from {
+      background-position: 0 0; /* Primer cuadro */
+  }
+  to {
+      background-position: -400% 0; /* Último cuadro (se mueve a la izquierda) */
+  }
+}
