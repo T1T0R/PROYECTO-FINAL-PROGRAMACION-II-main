@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Menu Principal</title>
     <link rel="stylesheet" href="/ESTILOS/estilo.css">
 </head>
 <body>
-    <!-- Contenedor de video de fondo -->
-    <div class="video-menu">
-        <video autoplay muted loop>
-            <source src="/RECURSOS/espacio2.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-        </video>
-    </div>
-
     <!-- Barra de navegación -->
     <nav class="navbar">
         <ul class="navbar-menu">
             <li>
-                <a href="#">Menú Desplegable</a>
+                <a href="#">Formulas Matematicas</a>
                 <ul class="dropdown">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li><a href="/PAGINAS/matematicas.html">Acceder</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Probabilidad y Estadistica</a>
+                <ul class="dropdown">
+                    <li><a href="/PAGINAS/estadistica.html">Acceder</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
-    <!-- Sprite centrado -->
-    <div class="sprite-container">
-        <div class="among-sprite"></div>
-    </div>
+    <video autoplay muted loop id="background-video">
+        <source src="/RECURSOS/espacio2.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+
+
+    <img src="/RECURSOS/OMGisAlbertEinstein.png" alt="Albert Einstein" class="Eistein">
+
+
+
 
     <script src="/SCRIPTS/login.js"></script>
 </body>
-<footer>
-   <p>thiagoroblesss</p>
-   <img src="/RECURSOS/logoig.jpg" alt="Logo Instagram" class="instagram-logo">
-</footer>
 </html>

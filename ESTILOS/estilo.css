@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 body,html {
@@ -145,11 +145,15 @@ footer{
     border-radius: 10px;
 }
 
+#footer-menu{
+  color:white;
+}
+
+
 
 .instagram-logo:hover {
     transform: scale(1.2); /* Efecto de aumentar el tamaño al pasar el mouse */
 }
-
 
 
 /* Registro */
@@ -233,20 +237,14 @@ footer{
   right: 0;
 }
 
-.video-menu {
-  position: fixed;
+#background-video {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.video-menu video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Hace que el video cubra toda el área del fondo */
+  z-index: -1; /* Asegura que el video esté detrás del contenido */
 }
 
 /* Barra de navegación transparente */
@@ -255,13 +253,17 @@ footer{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparente */
+  background-color:rgba(102, 88, 88, 0);
   display: flex;
   justify-content: center;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 30px 0px;
   font-family: Arial, sans-serif;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.3); /* Borde blanco suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil */
 }
+
+
 
 /* Menú de navegación */
 .navbar-menu {
@@ -324,41 +326,122 @@ footer{
   display: block;
 }
 
-/* Contenedor del sprite */
-.sprite-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Centra verticalmente */
-  position: relative;
-  z-index: 1;
+.Eistein{
+  width: 550px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  border-radius: 10px;
+  animation: animacioneistein 2s ease-out;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+  background: none;
 }
 
-/* Contenedor del sprite */
-.sprite-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Altura de la pantalla */
-  position: relative;
-  z-index: 1;
-}
-
-/* Sprite de Among Us */
-.among-sprite {
-  width:300px; /* Ancho de un cuadro individual */
-  height: 350px; /* Alto de un cuadro individual */
-  background-image: url('/RECURSOS/Amongus.png'); /* Ruta del sprite */
-  background-size: 400%; /* 4 cuadros en fila (cada uno 25% del ancho) */
-  animation: among-run 500ms steps(4) infinite; /* 4 pasos para la animación */
-}
-
-/* Animación del sprite */
-@keyframes among-run {
-  from {
-      background-position: 0 0; /* Primer cuadro */
+@keyframes animacioneistein {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  to {
-      background-position: -400% 0; /* Último cuadro (se mueve a la izquierda) */
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
+.body-bhaskara,.body-prob{
+  background-color: #1b1a1a; 
+}
+
+.caja-contenedora {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo común para todas las cajas */
+.caja-bhaskara, .caja-explicacion, .caja-ejemplo {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* Títulos dentro de las cajas */
+.caja-bhaskara h2, .caja-explicacion h2, .caja-ejemplo h2 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Párrafos dentro de las cajas */
+.caja-bhaskara p, .caja-explicacion p, .caja-ejemplo p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contenedor principal de las cajas */
+.caja-contenedora-prob {
+  display: flex;
+  flex-direction: column; /* Disposición vertical */
+  gap: 20px;
+  padding: 30px;
+  max-width: 800px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* Estilo general para las cajas */
+.caja-info, .caja-explicacion, .caja-calculos {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Caja 1: Información de la fórmula */
+.caja-info {
+  background-color: #f9f9f9; /* Fondo suave para la información */
+}
+
+/* Caja 2: Explicación de la fórmula */
+.caja-explicacion {
+  background-color: #f2f2f2; /* Fondo suave para la explicación */
+}
+
+/* Caja 3: Cálculos */
+.caja-calculos {
+  background-color: #e6e6e6; /* Fondo más oscuro para cálculos */
+}
+
+/* Títulos de las cajas */
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos dentro de las cajas */
+p {
+  font-size: 1rem;
+  color: #626161;
+  line-height: 1.6;
+}
+
+/* Estilo para los textos importantes */
+strong {
+  color: #007bff;
+}
+
+em {
+  font-style: italic;
+  color: #007bff;
+}
+
