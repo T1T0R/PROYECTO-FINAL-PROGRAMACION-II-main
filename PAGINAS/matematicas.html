@@ -42,23 +42,33 @@
       <p>La fórmula tiene dos soluciones, ya que la raíz cuadrada de <em>b² - 4ac</em> puede ser positiva o negativa, lo que da dos valores para <em>x</em>.</p>
       <p>Es importante que el discriminante (<em>b² - 4ac</em>) sea positivo para obtener soluciones reales. Si es negativo, las soluciones son complejas.</p>
     </div>
-    
-    <!-- Caja 3: Cálculo con un ejemplo -->
+
     <div class="caja-ejemplo">
-      <h2>Cálculo con Ejemplo</h2>
-      <p>Supongamos que tenemos la ecuación:</p>
-      <p><strong>2x² - 4x - 6 = 0</strong></p>
-      <p>Donde <em>a = 2</em>, <em>b = -4</em>, y <em>c = -6</em>.</p>
-      <p>Aplicamos la fórmula de Bhaskara:</p>
-      <p><strong>x = (-(-4) ± √((-4)² - 4 * 2 * -6)) / (2 * 2)</strong></p>
-      <p><strong>x = (4 ± √(16 + 48)) / 4</strong></p>
-      <p><strong>x = (4 ± √64) / 4</strong></p>
-      <p><strong>x = (4 ± 8) / 4</strong></p>
-      <p>Por lo tanto, las dos soluciones son:</p>
-      <p><strong>x₁ = (4 + 8) / 4 = 12 / 4 = 3</strong></p>
-      <p><strong>x₂ = (4 - 8) / 4 = -4 / 4 = -1</strong></p>
+      <h2>Calcular con tus propios valores</h2>
+      <p>Introduce los valores de <strong>a</strong>, <strong>b</strong>, y <strong>c</strong>:</p>
+    
+      <div class="input-group">
+        <label for="a">a:</label>
+        <input type="number" id="a" placeholder="Coeficiente a">
+      </div>
+      
+      <div class="input-group">
+        <label for="b">b:</label>
+        <input type="number" id="b" placeholder="Coeficiente b">
+      </div>
+      
+      <div class="input-group">
+        <label for="c">c:</label>
+        <input type="number" id="c" placeholder="Coeficiente c">
+      </div>
+    
+      <button class="boton-calculo-bhaskara" onclick="calcularBhaskara()">Calcular</button>
+      
+      <div id="resultado" style="margin-top: 20px;"></div>
     </div>
-  </div>
-  
+    
+    
+   
+  <script src="/SCRIPTS/scriptbhaskara.js"></script>
 </body>
 </html>

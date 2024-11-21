@@ -15,17 +15,10 @@ const guardarUsuario = function () {
   localStorage.setItem("email", email);
   localStorage.setItem("contraseña", password);
 
-  // Mostrar mensaje dinámico
-  document.open();
-  document.write(`
-    <h1>Usuario registrado exitosamente</h1>
-    <p>Bienvenido, ${nombre} ${apellidos}. Redirigiéndote al inicio...</p>
-  `);
-  document.close();
-
+  window.location.href='../index.html';
+  
   // Redirigir después de unos segundos
   setTimeout(() => {
-    window.location.href = "/index.html";
   }, 3000);
 };
 
@@ -40,15 +33,8 @@ const InicioSesion = function () {
 
   // Validar las credenciales
   if (storedEmail === loginEmail && storedPassword === loginPassword) {
-    document.open();
-    document.write(`
-      <h1>Inicio de sesión exitoso</h1>
-      <p>Bienvenido de nuevo. Redirigiéndote al menú principal...</p>
-    `);
-    document.close();
-
+    window.location.href='/PAGINAS/menuprincipal.html';
     setTimeout(() => {
-      window.location.href = "/PAGINAS/menuprincipal.html";
     }, 3000);
   } else if (loginEmail === "" || loginPassword === "") {
     alert("Por favor ingrese su email y/o contraseña.");
